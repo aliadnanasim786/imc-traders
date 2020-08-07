@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" href="./images/wam.png" type="image/x-icon">
+    <title>CONTACT US</title>
+</head>
+
+<body>
+    <div class="container-contact">
+        <div class="mobile-menu">
+            <span><i class="fas fa-times" id="close"></i></span>
+            <a href="index.html">
+                <li>home</li>
+            </a>
+            <a href="products.html">
+                <li>products</li>
+            </a>
+            <a href="about-us.html">
+                <li>about us</li>
+            </a>
+            <a href="contact-us.html" style="color: #039BE5;">
+                <li>contact us</li>
+            </a>
+        </div>
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./images/wam.png" alt=""></a>
+            </div>
+            <div class="menubar">
+                <ul>
+                    <a href="index.html">
+                        <li>home</li>
+                    </a>
+                    <a href="products.html">
+                        <li>products</li>
+                    </a>
+                    <a href="about-us.html">
+                        <li>about us</li>
+                    </a>
+                    <a href="contact-us.html" style="color: #039BE5;">
+                        <li>contact us</li>
+                    </a>
+                </ul>
+                <div class="social">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-linkedin"></i></span>
+                    <span style="font-size: 20px;" id="bars"><i class="fas fa-bars"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us-title">
+            <h1>CONTACT US</h1>
+        </div>
+        <h2 class="map-heading">Live Location</h2>
+        <div class="map-div"></div>
+        <div class="address-data">
+            <h2>IMC Traders</h2>
+
+            <p style="margin-top: 5vh;"><span>MOBILE:</span> 042********
+            </p><br>
+
+            <p><span>EMAIL:</span> Info@imctraders.com
+            </p><br>
+
+
+            <p><span>ADDRESS:</span> Rehman-Pura Workshop Stop Main Bedian Road Lahore Cantt, Punjab, Pakistan</p><br>
+
+        </div>
+        <div class="footer">
+            <p> &copy; All Right Reserved </p>
+            <h4>Design: <a href="tel:+923074545277">Ali Adnan Asim</a></h4>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Slider Starts
+        let slider = 1
+        const total_imgs = 2
+        let right_arrow = $('.right-arrow')
+        let left_arrow = $('.left-arrow')
+        window.onload = function() {
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        }
+
+        right_arrow.on('click', () => {
+            slider++
+            if (slider > total_imgs) {
+                slider = 1
+            }
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        })
+        left_arrow.on('click', () => {
+                slider--
+                if (slider <= 0) {
+                    slider = total_imgs
+                }
+                $('.slider').css({
+                    background: `url(./images/slider${slider}.PNG)`,
+                    backgroundSize: 'cover',
+                    backgroundPostion: 'center'
+                })
+            })
+            // Slider Ends
+
+
+
+        // Mobile Menu Starts
+        $('#bars').on('click', () => {
+            $('.mobile-menu').css({
+                top: '0vh'
+            })
+        })
+        $('#close').on('click', () => {
+                $('.mobile-menu').css({
+                    top: '-100vh'
+                })
+            })
+            // Mobile Menu Ends
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Traders</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/wam.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="mobile-menu">
+            <span><i class="fas fa-times" id="close"></i></span>
+            <a href="index.html" style="color: #039BE5;">
+                <li>home</li>
+            </a>
+            <a href="products.html">
+                <li>products</li>
+            </a>
+            <a href="about-us.html">
+                <li>about us</li>
+            </a>
+            <a href="contact-us.html">
+                <li>contact us</li>
+            </a>
+        </div>
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./images/wam.png" alt=""></a>
+            </div>
+            <div class="menubar">
+                <ul>
+                    <a href="index.html" style="color: #039BE5;">
+                        <li>home</li>
+                    </a>
+                    <a href="products.html">
+                        <li>products</li>
+                    </a>
+                    <a href="about-us.html">
+                        <li>about us</li>
+                    </a>
+                    <a href="contact-us.html">
+                        <li>contact us</li>
+                    </a>
+                </ul>
+                <div class="social">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-linkedin"></i></span>
+                    <span style="font-size: 20px;" id="bars"><i class="fas fa-bars"></i></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slider">
+            <div class="left-arrow">
+                <i class="fas fa-arrow-circle-left"></i>
+            </div>
+            <div class="right-arrow">
+                <i class="fas fa-arrow-circle-right"></i>
+            </div>
+        </div>
+
+        <div class="call-now">
+            <h1>We provide solutions for your growing successful business</h1>
+            <button>Call Now <i class="fas fa-phone"></i></button>
+        </div>
+        <div class="intro">
+            <h2>Welcome To IMC Traders</h2>
+            <p>IMC Traders is an “Industrial Automation & Control Company” whose aim is to provide best automation solutions to the industry. Automate is recognized as system integration solutions company with portfolio of diversified products and field
+                services in Pakistan serving all major industrial sectors.</p>
+        </div>
+        <div class="pics">
+            <img src="./images/15-1024x683.jpg" alt="">
+            <img src="./images/process.jpg" alt="">
+        </div>
+
+        <h2 id="heading" style="padding-bottom: 3%; padding-top: 5vw; text-align: center; font-family: monospace; text-transform: capitalize; font-size: 30px;">
+            industries Served</h2>
+
+        <div class="industries">
+            <div class="served">
+                <img src="./images/textile.png" alt="">
+                <div class="text">
+                    <h2>TEXTILE</h2>
+                </div>
+            </div>
+            <div class="served">
+                <img src="./images/oil-and-gas.png" alt="">
+                <div class="text">
+                    <h2>OIL AND GAS</h2>
+                </div>
+            </div>
+            <div class="served">
+                <img src="./images/cement.png" alt="">
+                <div class="text">
+                    <h2>CEMENT</h2>
+                </div>
+            </div>
+            <div class="served">
+                <img src="./images/automobile.png" alt="">
+                <div class="text">
+                    <h2>AUTOMOBILE</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            <h3>Brands We Offered</h3>
+            <div class="brand-container">
+                <img src="./images/alia.png" alt="">
+                <img src="./images/festo.png" alt="">
+                <img src="./images/john-c.png" alt="">
+                <img src="./images/kimo.png" alt="">
+            </div>
+            <button>Read More</button>
+        </div>
+
+        <div class="footer">
+            <p> &copy; All Right Reserved </p>
+            <h4>Design: <a href="tel:+923074545277">Ali Adnan Asim</a></h4>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Slider Starts
+        let slider = 1
+        const total_imgs = 2
+        let right_arrow = $('.right-arrow')
+        let left_arrow = $('.left-arrow')
+        window.onload = function() {
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        }
+
+        right_arrow.on('click', () => {
+            slider++
+            if (slider > total_imgs) {
+                slider = 1
+            }
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        })
+        left_arrow.on('click', () => {
+                slider--
+                if (slider <= 0) {
+                    slider = total_imgs
+                }
+                $('.slider').css({
+                    background: `url(./images/slider${slider}.PNG)`,
+                    backgroundSize: 'cover',
+                    backgroundPostion: 'center'
+                })
+            })
+            // Slider Ends
+
+
+
+        // Mobile Menu Starts
+        $('#bars').on('click', () => {
+            $('.mobile-menu').css({
+                top: '0vh'
+            })
+        })
+        $('#close').on('click', () => {
+                $('.mobile-menu').css({
+                    top: '-100vh'
+                })
+            })
+            // Mobile Menu Ends
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" href="./images/wam.png" type="image/x-icon">
+    <title>About US</title>
+</head>
+
+<body>
+    <div class="container-about">
+        <div class="mobile-menu">
+            <span><i class="fas fa-times" id="close"></i></span>
+            <a href="index.html">
+                <li>home</li>
+            </a>
+            <a href="products.html">
+                <li>products</li>
+            </a>
+            <a href="about-us.html" style="color: #039BE5;">
+                <li>about us</li>
+            </a>
+            <a href="contact-us.html">
+                <li>contact us</li>
+            </a>
+        </div>
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./images/wam.png" alt=""></a>
+            </div>
+            <div class="menubar">
+                <ul>
+                    <a href="index.html">
+                        <li>home</li>
+                    </a>
+                    <a href="products.html">
+                        <li>products</li>
+                    </a>
+                    <a href="about-us.html" style="color: #039BE5;">
+                        <li>about us</li>
+                    </a>
+                    <a href="contact-us.html">
+                        <li>contact us</li>
+                    </a>
+                </ul>
+                <div class="social">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-linkedin"></i></span>
+                    <span style="font-size: 20px;" id="bars"><i class="fas fa-bars"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="about-us-title">
+            <H1>ABOUT US</H1>
+        </div>
+        <div class="about-us-data">
+            <p>We are pleased to introduce that Automate Pakistan Private Limited is an “Industrial Automation & Control Company” which emerged in 1990 with an aim to provide best automation solutions to the industry. With over 26 years of experience in
+                the market, Automate is recognized as system integration solutions company with portfolio of diversified products and field services in Pakistan serving all major industrial sectors with the expertise.</p>
+            <h2>Vision
+            </h2>
+            <p>To become the leading and preferred by the Industry company in the field of Industrial Automation and Control to meet the client needs by providing customer driven, cost effective and quality solutions.</p>
+            <h2>Mission
+            </h2>
+            <p>To exceed customer expectations by offering quality Products, innovative services, product applications, and execution of Electrical Instrumentation and control projects on turnkey basis while staying within the funds allocated for the project
+                To provide our employees with healthy, transparent, enjoyable and rewarding working environment To enhance the value of the firm through profitable joint ventures To serve the society by participating in welfare programs</p>
+            <h2>Scope of Work
+            </h2>
+            <p>Supply of industrial instruments to provide solutions for Process Control, machine control, Electrical equipment, Instrumentation, O&M services, industrial control & system integration Supply of Industrial automation and control products like,
+                PLC, DCS, ESD, F&G and SCADA. Expertise of Troubleshooting, Field instrumentation & Installation Services for designing, installation & Commissioning of projects on turnkey basis.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p> &copy; All Right Reserved </p>
+        <h4>Design: <a href="tel:+923074545277">Ali Adnan Asim</a></h4>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Slider Starts
+        let slider = 1
+        const total_imgs = 2
+        let right_arrow = $('.right-arrow')
+        let left_arrow = $('.left-arrow')
+        window.onload = function() {
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        }
+
+        right_arrow.on('click', () => {
+            slider++
+            if (slider > total_imgs) {
+                slider = 1
+            }
+            $('.slider').css({
+                background: `url(./images/slider${slider}.PNG)`,
+                backgroundSize: 'cover',
+                backgroundPostion: 'center'
+            })
+        })
+        left_arrow.on('click', () => {
+                slider--
+                if (slider <= 0) {
+                    slider = total_imgs
+                }
+                $('.slider').css({
+                    background: `url(./images/slider${slider}.PNG)`,
+                    backgroundSize: 'cover',
+                    backgroundPostion: 'center'
+                })
+            })
+            // Slider Ends
+
+
+
+        // Mobile Menu Starts
+        $('#bars').on('click', () => {
+            $('.mobile-menu').css({
+                top: '0vh'
+            })
+        })
+        $('#close').on('click', () => {
+                $('.mobile-menu').css({
+                    top: '-100vh'
+                })
+            })
+            // Mobile Menu Ends
+    </script>
+</body>
+
+</html>
